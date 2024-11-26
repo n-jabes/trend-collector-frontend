@@ -15,8 +15,9 @@ const HomePage = () => {
       setTrends(data);
     } catch (error) {
       console.error('Error fetching trends:', error);
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
   };
 
   useEffect(() => {
